@@ -763,7 +763,7 @@ void oglh_set_rendering_to_fbo(int width, int height)
 	GLuint frame_buffer_id = 0, render_buffer_id = 0;
 	// whine: why does a user care about the frame_buffer and render_buffer
 	// id's they are just interior details -- that is the compiler's job
-	// this is, again, much to close to assembly language
+	// this is, again, much too close to assembly language
 
 	if(width > GL_MAX_RENDERBUFFER_SIZE || height > GL_MAX_RENDERBUFFER_SIZE)
 	{

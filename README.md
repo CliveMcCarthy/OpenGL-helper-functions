@@ -16,15 +16,15 @@ the 'current' program and I REALLY don't need to know the 'location' of the
 variable in GLSL storage. Just do it: set the variable as I specify
  -- spare me the details.
 
-None of these helper functions are particularly complicated. I just wish they, 
-or something like them, were part of the standard API.
+	None of these helper functions are particularly complicated. I just wish they, 
+	or something like them, were part of the standard API.
 
   void oglh_get_uniform_variable(const char *variable_name, int type, void *data);
   
   void oglh_set_uniform_variable(const char *variable_name, int type, void *data);
 
 	Set a uniform to an immediate constant value
-	An example of setting values for ads lighting (Phong lighting:
+	An example of setting values for ads lighting (Phong lighting):
 
   void oglh_set_uniform_value("ads_lighting", GL_FLOAT_VEC3, 0.5, 0.7, 0.3);
 	

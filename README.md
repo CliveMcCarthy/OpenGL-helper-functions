@@ -44,12 +44,13 @@ or something like them, were part of the standard API.
 	files and can be used elsewhere. If the optional header is used then the 
 	GLSL version needs to be on the first line.
 
-  void GLuint oglh_install_shader(const char *shader_name);
+  void GLuint oglh_install_shader(const char *shader_file_name);
 
 	Now for simple FBO use. Use the normal glDraw routines and periodically
 	blit the FBO to the front buffer
 
   void void oglh_set_rendering_to_fbo(int width, int height);
+  
   void void oglh_blit_fbo_to_front_buffer(void);
 
 	This function shows all active uniform variables (and their values) that are 

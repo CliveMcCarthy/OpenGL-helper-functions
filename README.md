@@ -24,14 +24,14 @@ or something like them, were part of the standard API.
 
 	Set a uniform to an immediate constant value
 	An example of setting values for ads lighting (Phong lighting:
-	
-	   oglh_set_uniform_value("ads_lighting", GL_FLOAT_VEC3, 0.5, 0.7, 0.3);
+
+  void oglh_set_uniform_value("ads_lighting", GL_FLOAT_VEC3, 0.5, 0.7, 0.3);
 	
 	The uniform variable named "ads_lighting" is a vec3 so the function
 	passes three doubles which are formed into a vec3 in the GLSL uniform 
 	variable. This is done inside the oglh_set_uniform_value function.
 
-   void oglh_set_uniform_value(const char *variable_name, int type, ...);
+  void oglh_set_uniform_value(const char *variable_name, int type, ...);
 
 	This function compiles both frag and vert shaders then links the shader and 
 	activates it.
@@ -43,16 +43,16 @@ or something like them, were part of the standard API.
 	files and can be used elsewhere. If the optional header is used then the 
 	GLSL version needs to be on the first line.
 
-   GLuint oglh_install_shader(const char *shader_name);
+  void GLuint oglh_install_shader(const char *shader_name);
 
 	Now for simple FBO use. Use the normal glDraw routines and periodically
 	blit the FBO to the front buffer
 
-    void oglh_set_rendering_to_fbo(int width, int height);
-    void oglh_blit_fbo_to_front_buffer(void);
+  void void oglh_set_rendering_to_fbo(int width, int height);
+  void void oglh_blit_fbo_to_front_buffer(void);
 
 	This function shows all active uniform variables (and their values) that are 
 	in the shader program. If a variable is present but isn't used it gets 
 	optimized out and won't appear -- which can be a surprise.
 	
-   void oglh_display_active_uniform_variables(void);
+  void void oglh_display_active_uniform_variables(void);

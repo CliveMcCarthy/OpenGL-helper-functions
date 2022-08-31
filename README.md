@@ -20,6 +20,7 @@ None of these helper functions are particularly complicated. I just wish they,
 or something like them, were part of the standard API.
 
   void oglh_get_uniform_variable(const char *variable_name, int type, void *data);
+  
   void oglh_set_uniform_variable(const char *variable_name, int type, void *data);
 
 	Set a uniform to an immediate constant value
